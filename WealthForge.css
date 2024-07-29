@@ -1,0 +1,151 @@
+dub{
+  position: fixed;
+  width: 360px;
+  border-radius: 3px;
+  top: -3px;
+  left: 0;
+  background: #007FFF;
+  height: 15vh;
+  
+}
+h2{
+  color: white;
+  font-family: monospace;
+  font-size: 33px;
+  transform: translateX(55px);
+  text-shadow: 2px 2px 2px #000;
+  
+}
+W{
+  position: fixed;
+  z-index: 1;
+  width: 60px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  
+}
+h1{
+  font-family: Georgia;
+}
+
+button{
+  background-color: #007FFF; /* Green background */
+  color: #ffffff; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Set font size */
+  cursor: pointer; /* Change cursor shape on hover */
+  border-radius: 5px; /* Add some rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add some shadow */
+}
+
+button:hover {
+  background-color: #007FFF; 
+}
+#Feature{
+  width: 100%;
+  padding: 70px 0;
+}
+.title-text{
+  text-align: center;
+  padding-bottom: 70px;
+}
+.title-text p{
+  margin: auto;
+  font-size: 20px;
+  color: #007FFF;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+.title-text p::after{
+  content: '';
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#007FFF,#fff);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.title-text h1{
+  font-size: 50px;
+}
+
+.box {
+  background-color: #eee;
+  padding: 20px;
+  width: 300px;
+  height: 35px;
+  overflow: hidden;
+  transition: height 0.5s;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.box.expanded {
+  height: 280px;
+}
+
+.initial-content {
+  display: block;
+}
+
+.more-content {
+  display: none;
+}
+
+.expanded .more-content {
+  display: block;
+}
+
+.shadow-image {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#sideNav{
+  width: 200px;
+  height: 80vh;
+  position: fixed;
+  right: -250px;
+  background: linear-gradient(#007FFF,#000);
+  top: 0;
+  z-index: 3;
+  transition: 0.5s;
+  transparency: 10;
+  border-radius: 7px;
+  border: 2px solid rgba(0, 127, 255, 0.5);
+  
+}
+nav ul li{
+  list-style: none;
+  margin: 50px 20px;
+   
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  
+}
+#menuBtn{
+  width: 50px;
+  height: 50px;
+  background: ;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#menuBtn img{
+  width: 20px;
+  margin-top: 15px;
+}

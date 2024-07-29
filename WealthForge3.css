@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.notification-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.notification-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.section {
+    padding: 20px;
+    background-color: #007FFF;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+.balance-container {
+    display: flex;
+    align-items: center;
+}
+
+.eye-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.button, .action-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #fff;
+    color: #007FFF;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover, .action-button:hover {
+    background-color: #005bb5;
+    color: #fff;
+}
+
+.action-button img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+input[type="number"], select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.action-section {
+    margin-top: 20px;
+}
+
+.success-message {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.action-button {
+    flex: 1 1 calc(50% - 10px);
+    margin: 5px;
+    background: linear-gradient(145deg, #007FFF, #005bb5);
+    color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+}

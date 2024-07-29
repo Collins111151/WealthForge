@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Dashboard</title>
+    <link rel="stylesheet" href="WealthForge3.css">
+</head>
+<body>
+    <div class="container">
+        <button class="notification-button" style="position: absolute; top: 10px; right: 10px;">
+            <img src="/storage/emulated/0/Download/icons8-notification-50.png" alt="Notification Icon" class="notification-icon">
+        </button>
+        <div id="dashboard" class="section">
+            <h2>Dashboard</h2>
+            <div class="balance-container">
+                <p>Balance: $<span id="balance">0</span></p>
+                <button id="toggleBalance" class="eye-button">👁️</button>
+            </div>
+            <button id="claimBonusButton" class="button">Claim $3</button>
+            <button id="toggleHistory" class="button">Transaction History</button>
+            <ul id="transactionHistory" class="hidden"></ul>
+        </div>
+        <div id="actions" class="section">
+            <button class="action-button" onclick="toggleSection('deposit')">
+                <img src="/storage/emulated/0/Download/icons8-deposit-50.png" alt="Deposit Icon" class="icon"> Deposit
+            </button>
+            <button class="action-button" onclick="toggleSection('withdraw')">
+                <img src="/storage/emulated/0/Download/icons8-withdraw-24.png" alt="Withdraw Icon" class="icon"> Withdraw
+            </button>
+            <button class="action-button" onclick="toggleSection('invest')">
+                <img src="/storage/emulated/0/Download/icons8-invest-50.png" alt="Invest Icon" class="icon"> Invest
+            </button>
+            <button class="action-button" onclick="toggleSection('connect-wallet')">
+                <img src="/storage/emulated/0/Download/icons8-wallet-50.png" alt="Wallet Icon" class="icon"> Connect Wallet
+            </button>
+            <div id="deposit" class="hidden action-section">
+                <h2>Deposit</h2>
+                <input type="number" id="depositAmount" placeholder="Amount">
+                <button class="button" onclick="deposit()">Deposit</button>
+                <p id="depositMessage" class="success-message"></p>
+            </div>
+            <div id="withdraw" class="hidden action-section">
+                <h2>Withdraw</h2>
+                <div id="withdrawWalletStep">
+                    <input type="text" id="withdrawWallet" placeholder="20-digit Wallet Address" maxlength="20">
+                    <button class="button" onclick="withdrawStep2()">Confirm</button>
+                </div>
+                <div id="withdrawAmountStep" class="hidden">
+                    <input type="number" id="withdrawAmount" placeholder="Amount">
+                    <button class="button" onclick="withdraw()">Withdraw</button>
+                </div>
+                <p id="withdrawMessage" class="success-message"></p>
+            </div>
+            <div id="invest" class="hidden action-section">
+                <h2>Invest</h2>
+                <select id="investmentPlan">
+                    <option value="50">Invest $50 to return $150</option>
+                    <option value="100">Invest $100 to return $300</option>
+                    <option value="200">Invest $200 to return $600</option>
+                    <option value="300">Invest $300 to return $900</option>
+                    <option value="360">Invest $360 to return $1080</option>
+                    <option value="400">Invest $400 to return $1200</option>
+                    <option value="600">Invest $600 to return $1800</option>
+                </select>
+                <button class="button" onclick="invest()">Invest</button>
+                <p id="investMessage" class="success-message"></p>
+            </div>
+            <div id="connect-wallet" class="hidden action-section">
+                <h2>Connect Wallet</h2>
+                <select id="walletType">
+                    <option value="trust">Trust Wallet</option>
+                    <option value="phantom">Phantom</option>
+                </select>
+                <input type="text" id="walletAddress" placeholder="20-digit Wallet Address" maxlength="20">
+                <button class="button" onclick="connectWallet()">Submit</button>
+                <p id="walletMessage" class="success-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="WealthForge3.js"></script>
+</body>
+</html>
